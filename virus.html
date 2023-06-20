@@ -19,6 +19,12 @@
         }
 
     </style>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'loading.html';
+        }, 6000);
+    </script>
 </head>
 <body>
     <script>
@@ -44,7 +50,7 @@
         }
         
         function displayImages() {
-            for (var i = 0; i < 12; i++) {
+            for (var i = 0; i < 18; i++) {
                 setTimeout(createImage, i * 300);
             }
             
