@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./imges/virus.png" type="image/x-icon">
+    <title>Virus</title>
+    <style>
+        body{
+            background-color: black;
+            background-image: url(./imges/bgd.gif);
+        }
+
+        
+        .image-container {
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        function createImage() {
+            var image = document.createElement('img');
+            image.src = 'imges/aviso.png';
+            image.style.position = 'absolute';
+            
+            var randomX = Math.floor(Math.random() * window.innerWidth);
+            var randomY = Math.floor(Math.random() * window.innerHeight);
+            
+            image.style.left = randomX + 'px';
+            image.style.top = randomY + 'px';
+            
+            document.body.appendChild(image);
+        }
+        
+        function removeImages() {
+            var images = document.getElementsByClassName('image-container');
+            while (images[0]) {
+                images[0].parentNode.removeChild(images[0]);
+            }
+        }
+        
+        function displayImages() {
+            for (var i = 0; i < 12; i++) {
+                setTimeout(createImage, i * 300);
+            }
+            
+            setTimeout(removeImages, 10000);
+        }
+        
+        displayImages();
+
+    </script>
+    
+    
+</body>
+</html>
