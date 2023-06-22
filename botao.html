@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="./imgs/botao.png" type="image/x-icon">
+  <title>BOTAO</title>
+
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 98vw;
+            height: 97vh;
+        }
+        .botao {
+            border: 5px solid #ffffff;
+            border-radius: 30px;
+            padding: 20px 60px;
+            color: #ffffff;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #000000;
+            animation: disco 0.5s infinite;
+        }
+        @keyframes disco {
+            0% { background-color: #010001; }
+            25% {background-color: #00FF00; }
+            50% { background-color: #057eff; } 
+            75% {background-color: #FFFF00; }
+            100% { background-color: #ff9900; } 
+        }
+    </style>
+
+
+  <script>
+    function redirecionar() {
+      window.location.href = "virus.html";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="redirecionar()" class="botao">CLICK AQUI</button>
+</body>
+</html>
